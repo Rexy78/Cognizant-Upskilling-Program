@@ -1,12 +1,9 @@
-// Console log for DevTools debugging
+
 console.log("Local Community Event Portal Loaded Successfully");
 
-// Track form submission status
 let formSubmitted = false;
 
-// ----------------------------
-// Phone Validation (onblur)
-// ----------------------------
+
 
 function validatePhone() {
 
@@ -26,10 +23,7 @@ function validatePhone() {
     return true;
 }
 
-// ----------------------------
-// Event Fee Display (onchange)
-// Save Preference in localStorage
-// ----------------------------
+
 
 function showFee() {
 
@@ -58,17 +52,14 @@ function showFee() {
 
     document.getElementById("feeDisplay").innerHTML = fee;
 
-    // Save preference
+
     localStorage.setItem(
         "preferredEvent",
         eventType
     );
 }
 
-// ----------------------------
-// Character Counter
-// Keyboard Event
-// ----------------------------
+
 
 function countCharacters() {
 
@@ -79,11 +70,6 @@ function countCharacters() {
         text.length;
 }
 
-// ----------------------------
-// Registration
-// onclick event
-// output element
-// ----------------------------
 
 function registerEvent() {
 
@@ -122,7 +108,7 @@ function registerEvent() {
         return;
     }
 
-    // Save last registered user
+  
     sessionStorage.setItem(
         "lastRegisteredUser",
         name
@@ -165,10 +151,6 @@ function registerEvent() {
     console.log(name);
 }
 
-// ----------------------------
-// Double Click Image
-// ondblclick
-// ----------------------------
 
 function enlargeImage(image) {
 
@@ -183,10 +165,7 @@ function enlargeImage(image) {
     }
 }
 
-// ----------------------------
-// Video Ready Event
-// oncanplay
-// ----------------------------
+
 
 function videoReady() {
 
@@ -197,10 +176,6 @@ function videoReady() {
         "Video Ready To Play";
 }
 
-// ----------------------------
-// Load Saved Event Preference
-// localStorage retrieval
-// ----------------------------
 
 window.onload = function () {
 
@@ -222,10 +197,7 @@ window.onload = function () {
     console.log("Page Loaded");
 };
 
-// ----------------------------
-// Clear Preferences
-// localStorage + sessionStorage
-// ----------------------------
+
 
 function clearPreferences() {
 
@@ -240,10 +212,7 @@ function clearPreferences() {
     console.log("Storage Cleared");
 }
 
-// ----------------------------
-// Geolocation
-// Find Nearby Events
-// ----------------------------
+
 
 function findLocation() {
 
@@ -331,10 +300,7 @@ function findLocation() {
     );
 }
 
-// ----------------------------
-// Warn Before Leaving Page
-// onbeforeunload
-// ----------------------------
+
 
 window.onbeforeunload = function () {
 
