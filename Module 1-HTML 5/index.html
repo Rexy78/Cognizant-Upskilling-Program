@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Community Event Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <header>
+        <h1>Local Community Event Portal</h1>
+        <p>Connecting Residents Through Community Activities</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+        <a href="help.html" target="_blank">Help</a>
+    </nav>
+
+    <!-- Main -->
+
+    <main>
+
+        <section id="home">
+
+            <div id="welcomeBanner">
+                <h2>Welcome Resident</h2>
+
+                <p>
+                    Stay informed about local events, workshops and
+                    community programs.
+                </p>
+
+                <span style="color:rgb(237, 234, 241);font-weight:bold;">
+                    Special Offer: Register today and get priority access!
+                </span>
+
+            </div>
+
+            <p class="highlight">
+                Registration for upcoming community events is now open.
+            </p>
+
+        </section>
+
+        <section id="events">
+
+            <h2>Community Event Gallery</h2>
+
+            <table>
+
+                <tr>
+
+                    <td>
+                        <img src="images/event1.jpg"
+                            alt="Music Festival"
+                            title="Music Night"
+                            class="gallery"
+                            ondblclick="enlargeImage(this)">
+
+                        <figcaption>
+                            Music Night
+                        </figcaption>
+                    </td>
+
+                    <td>
+                        <img src="images/event2.jpg"
+                            alt="Sports Day"
+                            title="Sports Day"
+                            class="gallery"
+                            ondblclick="enlargeImage(this)">
+
+                        <figcaption>
+                            Sports Day
+                        </figcaption>
+                    </td>
+
+                    <td>
+                        <img src="images/event3.jpg"
+                            alt="Food Festival"
+                            title="Food Festival"
+                            class="gallery"
+                            ondblclick="enlargeImage(this)">
+
+                        <figcaption>
+                            Food Festival
+                        </figcaption>
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <img src="images/event4.jpg"
+                            alt="Workshop"
+                            title="Workshop"
+                            class="gallery"
+                            ondblclick="enlargeImage(this)">
+
+                        <figcaption>
+                            Community Workshop
+                        </figcaption>
+                    </td>
+
+                    <td>
+                        <img src="images/event5.jpg"
+                            alt="Art Exhibition"
+                            title="Art Exhibition"
+                            class="gallery"
+                            ondblclick="enlargeImage(this)">
+
+                        <figcaption>
+                            Art Exhibition
+                        </figcaption>
+                    </td>
+
+                    <td>
+                        <img src="images/event6.jpg"
+                            alt="Community Meeting"
+                            title="Community Meeting"
+                            class="gallery"
+                            ondblclick="enlargeImage(this)">
+
+                        <figcaption>
+                            Community Meeting
+                        </figcaption>
+                    </td>
+
+                </tr>
+
+            </table>
+
+            <h2>Event Registration</h2>
+
+            <form id="eventForm">
+
+                <label>Full Name</label>
+                <input type="text"
+                    id="name"
+                    placeholder="Enter your full name"
+                    required
+                    autofocus>
+
+                <label>Email Address</label>
+                <input type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required>
+
+                <label>Phone Number</label>
+                <input type="text"
+                    id="phone"
+                    placeholder="Enter 10 digit phone number"
+                    onblur="validatePhone()"
+                    required>
+
+                <label>Event Date</label>
+                <input type="date"
+                    id="eventDate"
+                    required>
+
+                <label>Select Event</label>
+                <select id="eventType"
+                    onchange="showFee()"
+                    required>
+
+                    <option value="">
+                        Choose Event
+                    </option>
+
+                    <option value="Music Festival">
+                        Music Festival
+                    </option>
+
+                    <option value="Sports Day">
+                        Sports Day
+                    </option>
+
+                    <option value="Workshop">
+                        Workshop
+                    </option>
+
+                </select>
+
+                <p id="feeDisplay"></p>
+
+                <label>Feedback / Message</label>
+
+                <textarea
+                    id="feedback"
+                    rows="5"
+                    placeholder="Enter your message"
+                    onkeyup="countCharacters()">
+                </textarea>
+
+                <p>
+                    Characters Typed:
+                    <span id="charCount">0</span>
+                </p>
+
+                <button
+                    type="button"
+                    onclick="registerEvent()">
+
+                    Register Event
+
+                </button>
+
+            </form>
+
+            <output id="confirmationMessage"></output>
+
+            <br>
+
+            <button onclick="clearPreferences()">
+                Clear Preferences
+            </button>
+
+            <hr>
+
+            <h2>Find Nearby Events</h2>
+
+            <button onclick="findLocation()">
+                Find Nearby Events
+            </button>
+
+            <p id="locationResult"></p>
+
+            <hr>
+
+            <h2>Event Promo Video</h2>
+
+            <video
+                width="600"
+                controls
+                oncanplay="videoReady()">
+
+                <source
+                    src="video.mp4"
+                    type="video/mp4">
+
+                Your browser does not support video.
+
+            </video>
+
+            <p id="videoStatus"></p>
+
+        </section>
+
+        <section id="contact">
+
+            <h2>Contact Us</h2>
+
+            <p>Email: community@portal.com</p>
+
+            <p>Phone: +91 9876543210</p>
+
+            <p>
+                Address:
+                Community Service Center,
+                City Main Road
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+
+    <footer>
+        <p>
+            © 2026 Local Community Event Portal
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
