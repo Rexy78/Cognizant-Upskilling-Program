@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "name": "Music Festival",
+    "category": "Music",
+    "date": "2026-12-15",
+    "location": "Community Hall",
+    "seats": 50
+  },
+
+  {
+    "id": 2,
+    "name": "Sports Day",
+    "category": "Sports",
+    "date": "2026-11-20",
+    "location": "City Stadium",
+    "seats": 40
+  },
+
+  {
+    "id": 3,
+    "name": "Workshop on Baking",
+    "category": "Workshop",
+    "date": "2026-10-10",
+    "location": "Community Center",
+    "seats": 25
+  },
+
+  {
+    "id": 4,
+    "name": "Classical Music Night",
+    "category": "Music",
+    "date": "2026-09-18",
+    "location": "Town Auditorium",
+    "seats": 30
+  },
+
+  {
+    "id": 5,
+    "name": "Youth Football Tournament",
+    "category": "Sports",
+    "date": "2026-08-22",
+    "location": "Sports Complex",
+    "seats": 60
+  }
+]
