@@ -1,0 +1,254 @@
+/* Universal Selector */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Body Styles */
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f4f6f9;
+    color:#333;
+    line-height:1.8;
+}
+
+/* Header Styles */
+
+#mainHeader{
+
+    background:linear-gradient(
+        to right,
+        #0052cc,
+        #00a2ff
+    );
+
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+/* Element Selector */
+
+h2{
+    color:#003366;
+    margin-bottom:15px;
+}
+
+/* Navigation */
+
+nav{
+
+    background:#222;
+}
+
+nav ul{
+
+    list-style-type:none;
+    list-style-position:inside;
+
+    display:flex;
+    justify-content:center;
+}
+
+nav li{
+
+    padding:15px;
+    margin:5px;
+}
+
+/* Link Styling */
+
+a:link{
+    color:white;
+    text-decoration:none;
+}
+
+a:hover{
+    color:yellow;
+}
+
+a:active{
+    color:red;
+}
+
+a:visited{
+    color:#cccccc;
+}
+
+/* Event Cards */
+
+.eventCard{
+
+    background:rgba(255,255,255,0.95);
+
+    border:2px solid #0052cc;
+
+    padding:20px;
+
+    margin:20px;
+
+    outline:1px dashed gray;
+
+    border-radius:8px;
+}
+
+/* Grouping Selector */
+
+h3,
+p{
+    margin-bottom:10px;
+}
+
+/* CTA Button */
+
+.cta-button{
+
+    background:#007BFF;
+
+    color:white;
+
+    border:none;
+
+    padding:10px 20px;
+
+    cursor:pointer;
+
+    border-radius:5px;
+}
+
+.cta-button:hover{
+    background:#0056b3;
+}
+
+/* Table Styling */
+
+table{
+
+    width:90%;
+
+    margin:20px auto;
+
+    border-collapse:collapse;
+
+    text-align:center;
+
+    background:white;
+}
+
+th,
+td{
+
+    border:1px solid #ddd;
+
+    padding:12px;
+}
+
+th{
+
+    background:#007BFF;
+
+    color:white;
+}
+
+tr:nth-child(even){
+
+    background:#f2f2f2;
+}
+
+/* Form Styling */
+
+form{
+
+    margin:20px;
+}
+
+input{
+
+    display:block;
+
+    width:300px;
+
+    padding:10px;
+
+    margin-bottom:10px;
+}
+
+input:focus{
+
+    outline:3px solid blue;
+}
+
+/* Multi Column Layout */
+
+.newsArticle{
+
+    column-count:2;
+
+    column-gap:30px;
+
+    column-rule:1px solid gray;
+
+    padding:20px;
+
+    background:white;
+
+    margin:20px;
+}
+
+/* Visibility Example */
+
+.hiddenBox{
+
+    visibility:hidden;
+}
+
+.noneBox{
+
+    display:none;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width:768px){
+
+    nav ul{
+
+        flex-direction:column;
+
+        text-align:center;
+    }
+
+    h1{
+
+        font-size:24px;
+    }
+
+    h2{
+
+        font-size:20px;
+    }
+
+    .eventCard{
+
+        width:90%;
+        margin:15px auto;
+    }
+
+    table{
+
+        width:100%;
+    }
+
+    input{
+
+        width:100%;
+    }
+
+    .newsArticle{
+
+        column-count:1;
+    }
+}
