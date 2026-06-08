@@ -1,0 +1,14 @@
+CSS Folder
+
+Contains Bootstrap stylesheets.
+Used for colors, layouts, buttons and responsive design.
+
+JS Folder
+
+Contains Bootstrap JavaScript files.
+Used for modals, accordions, dropdowns and other interactive components.
+
+Icons Folder
+
+Contains Bootstrap Icons.
+Used to add icons such as search, home and social media icons.
